@@ -250,8 +250,12 @@ h2{
     }
   }
 
+  .signup-form{
+    display:block;
+  }
 
   .label-Name{
+    display:block;
     padding:20px 60px;
     border-radius:12px;
     text-align: center;
@@ -259,9 +263,11 @@ h2{
     opacity:96%;
     border:none;
     color:white;
+  
   }
 
   .label-Name-Big{
+   
     padding:20px 60px;
     border-radius:12px;
     text-align: center;
@@ -287,21 +293,11 @@ h2{
     }
   }
 
-.form-group{
-  text-align:center;
-  padding:40px 0 20px;
-}
-
-.form-group-2{
-  text-align:center;
-  
-}
-
   ::placeholder{
     color:white;
   }
 
-  .submit-button{
+  .log-in-submit-button{
     display:flex;
     justify-content: center;
 

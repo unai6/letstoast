@@ -26,9 +26,12 @@ class Validator {
     }
     
     errorCreator (message, location) {
+        console.log(message, location)
         let div = document.createElement("div")
         div.setAttribute("class", "error")
         div.innerHTML = message
+        console.log(form);
+        console.log(div)
         form.insertBefore(div, location)
     }
 
@@ -39,9 +42,8 @@ class Validator {
 }
 
 class SignUpValidator extends Validator {
-    constructor (userName, email, password, repeatPassword){
+    constructor (userName, email, password){
         super(userName, email, password);
-        this.repeatPassword = repeatPassword
     }
 
     checkEmailInDB (usersDB){
@@ -60,16 +62,10 @@ class SignUpValidator extends Validator {
         return userExists;
     }
 
-    checkRepeatPassword () {
-        if(this.password === this.repeatPassword) {
-            return true;
-        } else {
-            return false;
-        } 
-    }
+   
 }
 
-class LogInValidator extends Validator {
+/*class LogInValidator extends Validator {
     constructor (){
         super();
     }
@@ -86,4 +82,4 @@ class LogInValidator extends Validator {
         return false
     }
 
-}
+}*/
