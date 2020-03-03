@@ -50,12 +50,12 @@ class SignUpValidator extends Validator {
         let userExists = false;
 
         if (!usersDB){
-            return true;
+            return false;
         }
         else{
             usersDB.forEach(user => {
                 if (user.email === this.email){
-                    userExists=false
+                    userExists= true
                 }
             })
         }
@@ -65,21 +65,24 @@ class SignUpValidator extends Validator {
    
 }
 
-/*class LogInValidator extends Validator {
-    constructor (){
-        super();
+class LogInValidator extends Validator {
+    constructor (userName,email, password){
+        super(userName, email, password);
     }
 
     checkEmailInDB (string){
-        if (!userDB){
-            return false
+        let emailInDb = false
+        if (!usersDB){
+        
+            emailInDb = false
         }
         else{
-            userDB.forEach(user => {
-                if (user.email === string){return true}
+            usersDB.forEach(user => {
+                if (user.email === string){emailInDb = true}
+               
             })
         }
-        return false
+        return emailInDb
     }
 
-}*/
+}

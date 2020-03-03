@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
 
 * {
-  font-family: Roboto;
+  font-family: Roboto Condensed;
 }
   
   html {
@@ -72,6 +72,18 @@
       opacity:90%;
   }
 
+  .Create-cocktail{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+.Create-cocktail:hover{
+  color:#F08080;
+  text-decoration: none;
+}
+
   .carousel-background{
       background-color:#F08080;
       border-radius:20px;
@@ -122,7 +134,7 @@ color:black;
   color:#F08080;
 }
 
-h2{
+.bethe-best{
   text-align: center;
   padding:20px;
 }
@@ -226,6 +238,7 @@ h2{
 .pink-hr{
   background-color:#F08080; 
   height:20px;
+  margin: 30px 0 0 0;
   }
 
   .signup-h1{
@@ -242,20 +255,16 @@ h2{
     height:700px;
   }
 
-  @media (max-width:600px){
-    .background-imageSU{
-      background-size:cover;
-      box-sizing: content-box;
-      height:300px;
-    }
-  }
 
-  .signup-form{
-    display:block;
-  }
+@media(max-width:1200px){
+  .signup-form{margin-right:50px; margin-left:50px}
+}
+
+@media(min-width:360px){
+.signup-form{margin-right:80px; margin-left:80px;}
+}
 
   .label-Name{
-    display:block;
     padding:20px 60px;
     border-radius:12px;
     text-align: center;
@@ -263,6 +272,7 @@ h2{
     opacity:96%;
     border:none;
     color:white;
+    margin:2px 0px;
   
   }
 
@@ -277,6 +287,7 @@ h2{
     color:white;
     opacity:90%;
     height:100px;
+    margin:2px 0px;
   }
 
   @media(max-width: 600px){
@@ -302,3 +313,54 @@ h2{
     justify-content: center;
 
   }
+
+  .background-imageLI{
+    background-image: url('https://drive.google.com/uc?export=download&id=1r98u9WhV1t7ugbSqWQuQ5QtB4GYLSV-m');
+    box-sizing:border-box;  
+    background-size:cover;
+    height:700px;
+    
+  }
+
+  @media(max-width:300px){
+    .background-image-LI{
+      box-sizing:border-box;
+      background-size:cover;
+      height:150px;
+    }
+  }
+
+  @media(max-width:600px){
+    .background-image-LI{
+      box-sizing:border-box;
+      background-size:cover;
+      height:200px;
+    }
+  }
+
+
+  .back-color {
+  background-color: black;
+  }
+
+
+  .ready-to-drink{
+    color:whitesmoke;
+    font-weight: bold;
+    margin-left:30px;
+    margin-top:10px;
+    font-family:Arial Narrow, sans-serif
+  
+  }
+
+    .background-imageCC{
+      background-image: url('https://drive.google.com/uc?export=download&id=1j-HfwXhc4mKRzSHLv4UUPh7BVZwJNW3v');
+      height:800px;
+      box-sizing:border-box;
+      opacity:90%;
+      position:absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+    }

@@ -16,12 +16,12 @@ signUpButton.addEventListener("click", function(event){
     if (checkValidUser()){
         console.log("user registered")
         createUser(userName.value, email.value, password.value)
+        window.location = 'cocktelproject.html'
     };
 })
 
 function checkValidUser() {
     let signUpValidator = new SignUpValidator(userName.value, email.value, password.value);
-    
     let usersDB = JSON.parse(localStorage.getItem("users"));
     let validUser = true;
 
@@ -38,7 +38,7 @@ function checkValidUser() {
         validUser=false
     }
   
-    if (!signUpValidator.checkEmailInDB(usersDB)){
+    if (signUpValidator.checkEmailInDB(usersDB)){
         signUpValidator.errorCreator("Este mail ya existe", email)
         validUser=false
     }
