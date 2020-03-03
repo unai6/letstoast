@@ -364,3 +364,19 @@ color:black;
       left:0;
       right:0;
     }
+
+    img{
+
+    width:40%;; 
+    
+    }
+
+    li{
+      background-color: ghostwhite;
+      font-size: 1rem;
+      display: flex;
+      line-height: 3;
+      width: 70%;
+      color: black;
+    }
+   

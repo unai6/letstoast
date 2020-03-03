@@ -24,7 +24,7 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
 
 let url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
 
-fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
+fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php/')
 .then(function(response) {
   return response.json();
 })
@@ -38,10 +38,16 @@ function addList(){
     
   let bigList= document.getElementById('cocktail-list')
 
-  randomCocktail.forEach(li => {
+  randomCocktail.forEach(bebida => {
 
   let newList= document.createElement('li')
-  newList.innerHTML= li
+  newList.innerHTML= `
+  Name: ${bebida.nombre}
+  Glass: ${bebida.vaso}
+  Ingredients: ${bebida.ingredientes1}
+  Instructions: ${bebida.instrucciones}
+  Photo: <img src="${bebida.foto}">
+  `
   bigList.appendChild(newList)
 })
 
@@ -58,8 +64,6 @@ function toDelete(){
 
     bigList.removeChild(lastChild)
     randomCocktail.pop()  
-
-
 }
 
 myButton.onclick = toDelete
@@ -78,7 +82,6 @@ fetch(url)
   //console.log(data.drinks[0])
 let myData = {
   nombre: data.drinks[0].strDrink,
-  categoria: data.drinks[0].strCategory,
   ingredientes1: data.drinks[0].strIngredient1,
   ingredientes2: data.drinks[0].strIngredient2,
   ingredientes3: data.drinks[0].strIngredient3,
@@ -92,7 +95,7 @@ let myData = {
 //console.log(myData)
 
 bigList.innerHTML =''
-randomCocktail.push(JSON.stringify(myData))
+randomCocktail.push(myData)
 addList()
 });
 
