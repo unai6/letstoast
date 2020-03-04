@@ -12,6 +12,7 @@
     font-size:1em;
     text-decoration:none;
     position:fixed;
+    margin-top:20px;
 }
   
 @media (max-width:600px){
@@ -37,6 +38,32 @@
 }
 
 
+.go-home{
+  text-decoration: none;
+  color:wheat;
+  position:absolute;
+  left:0;
+  margin-left:10px;
+  border:solid;
+  padding:5px 15px;
+  font-family: Arial;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+.go-home:hover{
+  text-decoration: none;
+  color:cornflowerblue
+}
+
+.log-in-btn{
+  border-radius:10px;
+  background-color: white;
+  padding:5px 15px;
+  border:solid;
+  opacity:70%;
+}
+
 
 .home-button {
     transition-duration: 0.4s;
@@ -57,7 +84,9 @@
   }
 
   .h1-title{
+      
       text-align:center;
+      margin-top:20px;
   }
 
   .h4-title{
@@ -134,7 +163,10 @@
 
 
   .carousel-background{
-      background-color:#F08080;
+    background: #F07A62;
+    background: -moz-linear-gradient(-45deg, #F07A62 0%, #F0EDE6 65%, #F09595 100%);
+    background: -webkit-linear-gradient(-45deg, #F07A62 0%, #F0EDE6 65%, #F09595 100%);
+    background: linear-gradient(135deg, #F07A62 0%, #F0EDE6 65%, #F09595 100%);
       border-radius:20px;
       
   }
@@ -220,13 +252,15 @@ color:black;
 }
 
 .glass-class{
-  height:7%;
-  width:7%;
+  height:10%;
+  width:10%;
 }
 
 .glass-class-1{
   margin-left:10px;
   margin-bottom:5px;
+  height:10%;
+  width:10%
 }
 
 .glass-char{
@@ -244,6 +278,7 @@ color:black;
 @media(max-width:600px){
   .glass-link{
     margin-left:5px;
+    font-size:10px;
   }
 }
 
@@ -255,9 +290,15 @@ margin-left:20px;
 
 .glass-tools{
   margin-left:10px;
+  font-size:10px;
   }
 }
 
+@media(max-width:600px){
+  b{
+    font-size:10px;
+  }
+}
 
 .site-footer
 {
@@ -283,6 +324,7 @@ margin-left:20px;
   color:#F08080;
   text-decoration:none;
 }
+
 .footer-links
 {
   padding-left:0;
@@ -307,12 +349,13 @@ margin-left:20px;
   margin:0
 }
 
+
 @media (max-width:600px)
 {
   .site-footer
   {
     padding-bottom:0;
-    font-size:8px;
+    font-size:10px;
   }
 }
 
@@ -342,13 +385,14 @@ margin-left:20px;
   display:flex;
   justify-content: center;
   font-size:14px;
+  padding:10px;
 
 }
 
 
 @media (max-width:600px){
   .getcocktail-form{
-    font-size:4px;
+    font-size:10px;
     padding:10px;
     
   }
@@ -356,8 +400,9 @@ margin-left:20px;
 
 .pink-hr{
   background-color:#F08080; 
-  height:20px;
-  margin: 30px 0 0 0;
+  height:10px;
+  margin-bottom: 0px;
+  margin-top:0px;
   }
 
   .signup-h1{
@@ -368,20 +413,13 @@ margin-left:20px;
   }
 
   .background-imageSU{
+    
     background-image: url('https://drive.google.com/uc?export=download&id=1szT4W07X5sLfb9SJ_XiQt5zA3f4oGlji');
     box-sizing:border-box;
     background-size:cover;
     height:700px;
   }
 
-
-@media(max-width:1200px){
-  .signup-form{margin-right:50px; margin-left:50px}
-}
-
-@media(min-width:360px){
-.signup-form{margin-right:80px; margin-left:80px;}
-}
 
   .label-Name{
     padding:20px 60px;
@@ -393,6 +431,19 @@ margin-left:20px;
     color:white;
     margin:2px 0px;
   
+  }
+
+  @media(max-width: 600px){
+    .label-Name{
+      padding:20px 60px;
+      border-radius:12px;
+      text-align: center;
+      background-color:#E45252;
+      opacity:96%;
+      border:none;
+      color:white;
+      font-size:10px;
+    }
   }
 
   .label-Name-Big{
@@ -420,6 +471,7 @@ margin-left:20px;
       color:white;
       opacity:80%;
       height:40px;
+      font-size:10px;
     }
   }
 
@@ -465,10 +517,17 @@ margin-left:20px;
 
   .ready-to-drink{
     color:whitesmoke;
-    font-weight: bold;
     margin-left:30px;
     margin-top:10px;
-    font-family:Arial Narrow, sans-serif;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 35px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
     text-align:center
   
   }
@@ -487,18 +546,29 @@ margin-left:20px;
 
   
     .ready-to-drink{
-      font-size:36px;
+        -webkit-animation: glow 2s ease-in-out infinite alternate;
+        -ms-animation: glow 2s ease-in-out infinite alternate;
+        animation: glow 2s ease-in-out infinite alternate;
     }
 
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffff66, 0 0 40px #ffff66, 0 0 50px #ffff66, 0 0 60px #ffff66, 0 0 70px #ffff66;
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #F08080, 0 0 40px #F08080, 0 0 50px #F08080, 0 0 60px #F08080, 0 0 70px #F08080 0 0 80px #F08080,
+      }
+    }
 
     #cocktail-list{
       display:inline-block;
       color:black;
       width:80%;
       text-align:center;
-      margin-left:30px;
-      background-color: whitesmoke;
-      margin-bottom:10px;
+      background: #FFFFFF;
+      background: -moz-linear-gradient(-45deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
+      background: -webkit-linear-gradient(-45deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
+      background: linear-gradient(135deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
       border-radius:10px;
     }
 
@@ -508,16 +578,49 @@ margin-left:20px;
         font-weight: bold;
         font-family: Roboto Condensed;
         opacity:80%;
+        height:30px;
+        font-size:20px;
+        border:none;
+        background: #FFFFFF;
+        background: -moz-linear-gradient(-45deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
+        background: -webkit-linear-gradient(-45deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
+        background: linear-gradient(135deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
+    }
+    
+    @media(max-width:600px){
+      #cocktail-button{
+        border-radius: 10px;
+        font-weight: bold;
+        font-family: Roboto Condensed;
+        opacity:80%;
+        height:20px;
+        font-size:10px;
+        border:none;
+        background: #FFFFFF;
+        background: -moz-linear-gradient(-45deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
+        background: -webkit-linear-gradient(-45deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
+        background: linear-gradient(135deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
+      }
     }
 
     #cocktail-button:hover{
-      color:#F08080; 
+      color:darkblue
     }
 
     div{
       text-align:center;
+      border-radius:10px;
+      font-size:14px;
     }
 
+    @media(max-width:600px){
+    div{
+      text-align:center;
+      border-radius:10px;
+      font-size:10px;
+      }  
+    }
+    
    
     img{
       width:350px;
@@ -535,16 +638,64 @@ margin-left:20px;
       }
     }
 
+    @media(max-width:300px){
+      img{
+        width:100px;
+        border-radius:50%;
+        margin-left:5px;
+      }
+    }
+
     .remove-button{
       text-decoration:none;
       position:absolute;
-      left:0;
-      margin-left:30px;
-      border-radius:10px;
+      right:0;
+      bottom:0;
+      margin-left:70px;
+      border-radius:50%;
+      position:fixed;
+      padding:10px;
+      width:85px;
+      background-color:black;
+      color:wheat;
+      margin-right:10px;
+      margin-bottom:10px;
       
     }
 
+    @media(max-width:768px){
+      .remove-button{
+      text-decoration:none;
+      position:absolute;
+      right:0;
+      bottom:0;
+      margin-left:15px;
+      border-radius:50%;
+      position:fixed;
+      padding:10px;
+      width:85px;
+      background-color:black;
+      color:wheat
+      }
+    }
+
+
+    
+    @media(max-width:500px){
+      .remove-button{
+      text-decoration:none;
+      position:absolute;
+      margin-left:15px;
+      border-radius:50%;
+      position:fixed;
+      padding:10px;
+      width:65px;
+      background-color:black;
+      color:wheat
+      }
+    }
+
     .remove-button:hover{
-      color:#E45252;
+      color:#ffff66;
       
     }
