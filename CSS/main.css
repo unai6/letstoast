@@ -495,7 +495,7 @@ margin-left:20px;
   }
 
   @media(max-width:300px){
-    .background-image-LI{
+    .background-imageLI{
       box-sizing:border-box;
       background-size:cover;
       height:150px;
@@ -503,7 +503,7 @@ margin-left:20px;
   }
 
   @media(max-width:600px){
-    .background-image-LI{
+    .background-imageLI{
       box-sizing:border-box;
       background-size:cover;
       height:200px;
@@ -700,3 +700,75 @@ margin-left:20px;
       color:#ffff66;
       
     }
+
+    .Logged-Succ{
+      padding:10px;
+      font-size:85px;  
+    }
+
+    @media(max-width:600px){
+      .Logged-Succ{
+        padding:20px;
+        font-size:30px;
+      }
+    }
+  
+
+    .background-imageSLI{
+      background-image:url('https://drive.google.com/uc?export=download&id=1eyoF6xz2eAdZHPun9yetdY-3219vco9M');
+     
+      height:700px;
+      
+    }
+  
+    @media(max-width:300px){
+      .background-imageSLI{
+            height:150px;
+      }
+    }
+  
+    @media(max-width:600px){
+      .background-imageSLI{
+        height:200px;
+      }
+    }
+
+
+      .log-in-btn-succ{
+        color:black;
+        border: 2px solid greenyellow;
+        opacity: 96%;
+        height:100px;
+        width:300px;
+        border-radius:10px;
+        background: #58CE15;
+        background: -moz-linear-gradient(left, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
+        background: -webkit-linear-gradient(left, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
+        background: linear-gradient(to right, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
+        padding:25px 60px;
+        text-align: center;
+        font-size:28px;
+      }
+
+      @media(max-width:600px){
+        .log-in-btn-succ{
+        color:black;
+        border: 2px solid greenyellow;
+        opacity: 96%;
+        height:20px;
+        width:60px;
+        border-radius:10px;
+        background: #58CE15;
+        background: -moz-linear-gradient(left, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
+        background: -webkit-linear-gradient(left, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
+        background: linear-gradient(to right, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
+        padding:25px 60px;
+        text-align: center;
+        font-size:12px;
+        }
+      }
+
+      .log-in-btn-succ:hover{
+        text-decoration: none;
+        color:black
+      }

@@ -45,7 +45,7 @@ loginButton.addEventListener("click", function(event){
     
    if (checkLogUser()){
         console.log('succesfully log in')
-       window.location = './index.html'
+       window.location = './Create_your_cocktail.html'
        }
 });
 

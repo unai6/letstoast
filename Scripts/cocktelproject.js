@@ -45,6 +45,11 @@ function addList(){
   Name: ${bebida.nombre}<br>
   Glass: ${bebida.vaso}<br>
   Ingredients: ${bebida.ingredientes1}<br>
+  Ingredients: ${bebida.ingredientes2}<br>
+  Ingredients: ${bebida.ingredientes3}<br>
+  Ingredients: ${bebida.ingredientes4}<br>
+  Ingredients: ${bebida.ingredientes5}<br>
+  Ingredients: ${bebida.ingredientes6}<br>
   Instructions: ${bebida.instrucciones}<br>
   Voilà: <img src="${bebida.foto}"><br>
   `
@@ -74,7 +79,6 @@ myButton.onclick = toDelete
 addCocktail = document.getElementById('cocktail-button')
 
 function oneCocktail(){
-  let myData
   let bigList= document.getElementById('cocktail-list')
 
 fetch(url)
