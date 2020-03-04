@@ -40,15 +40,16 @@ function addList(){
 
   randomCocktail.forEach(bebida => {
 
-  let newList= document.createElement('li')
+  let newList= document.createElement('div')
   newList.innerHTML= `
-  Name: ${bebida.nombre}
-  Glass: ${bebida.vaso}
-  Ingredients: ${bebida.ingredientes1}
-  Instructions: ${bebida.instrucciones}
-  Photo: <img src="${bebida.foto}">
+  Name: ${bebida.nombre}<br>
+  Glass: ${bebida.vaso}<br>
+  Ingredients: ${bebida.ingredientes1}<br>
+  Instructions: ${bebida.instrucciones}<br>
+  Voilà: <img src="${bebida.foto}"><br>
   `
   bigList.appendChild(newList)
+  
 })
 
 }
@@ -60,7 +61,7 @@ let myButton = document.getElementById("remove-button")
 function toDelete(){
     //console.log('eliminar')
     let bigList= document.getElementById('cocktail-list')
-    let lastChild= bigList.lastChild
+    let lastChild= bigList.lastElementChild
 
     bigList.removeChild(lastChild)
     randomCocktail.pop()  
