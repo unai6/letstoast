@@ -8,5 +8,4 @@ Project goals
 
 HTML
 
-- Bootstrap based
 - Structured in three sections (landingpage, sign up page & log in page)
