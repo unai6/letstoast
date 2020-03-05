@@ -18,7 +18,7 @@
   
 @media (max-width:600px){
   .nav-div{
-    height:40px;
+    height:0px;
   }
 }
 
@@ -72,16 +72,25 @@
     color:black;
     font-weight: 600;
     font-family: Roboto;
+    font-size:20px;
 
+  }
+
+  @media(max-width: 600px){
+    .home-button{
+   transition-duration: 0.4s;
+    border-radius:1%;
+    color:black;
+    font-weight: 600;
+    font-family: Roboto;
+    font-size:12px;
+        
+    }
   }
   
   .home-button:hover{
     color:#F08080;
     text-decoration:none;
-  }
-
-  .my-cup{
-    height:20px;
   }
 
   .h1-title{
@@ -165,7 +174,6 @@
 
   .carousel-background{
     background: #F07A62;
-    background: -moz-linear-gradient(-45deg, #F07A62 0%, #F0EDE6 65%, #F09595 100%);
     background: -webkit-linear-gradient(-45deg, #F07A62 0%, #F0EDE6 65%, #F09595 100%);
     background: linear-gradient(135deg, #F07A62 0%, #F0EDE6 65%, #F09595 100%);
       border-radius:20px;
@@ -226,7 +234,18 @@
 .first-list{
 text-decoration:none;
 color:black;
+font-size:20px;
 }
+
+@media(max-width: 600px){
+  .first-list{
+    text-decoration:none;
+    color:black;
+    font-size:12px;
+      
+  }
+}
+
 .first-list:hover{
   color:#F08080;
 }
@@ -234,6 +253,16 @@ color:black;
 .first-list-1{
   text-decoration:underline;
   color:black;
+  font-size:20px;
+  }
+
+  @media(max-width: 600px){
+    .first-list-1{
+      text-decoration:underline;
+      color:black;
+      font-size:12px;
+        
+    }
   }
 
 .first-list-1:hover{
@@ -255,6 +284,7 @@ color:black;
 .glass-class{
   height:10%;
   width:10%;
+  
 }
 
 .glass-class-1{
@@ -415,10 +445,11 @@ margin-left:20px;
 
   .background-imageSU{
     
-    background-image: url('https://drive.google.com/uc?export=download&id=1szT4W07X5sLfb9SJ_XiQt5zA3f4oGlji');
-    box-sizing:border-box;
-    background-size:cover;
-    height:700px;
+    background: url('https://drive.google.com/uc?export=download&id=1szT4W07X5sLfb9SJ_XiQt5zA3f4oGlji')  no-repeat center center;
+    background-size: cover;
+    box-sizing: border-box;
+    height: 100vh;
+    
   }
 
 
@@ -487,26 +518,28 @@ margin-left:20px;
   }
 
   .background-imageLI{
-    background-image: url('https://drive.google.com/uc?export=download&id=1r98u9WhV1t7ugbSqWQuQ5QtB4GYLSV-m');
-    box-sizing:border-box;  
-    background-size:cover;
-    height:700px;
+    background: url('https://drive.google.com/uc?export=download&id=1r98u9WhV1t7ugbSqWQuQ5QtB4GYLSV-m') no-repeat center center;
+    background-size: cover;
+    box-sizing: border-box;
+    height: 100vh;
     
   }
 
   @media(max-width:300px){
     .background-imageLI{
-      box-sizing:border-box;
-      background-size:cover;
-      height:150px;
+      background: url('https://drive.google.com/uc?export=download&id=1r98u9WhV1t7ugbSqWQuQ5QtB4GYLSV-m')no-repeat center center;
+      background-size: cover;
+      box-sizing: border-box;
+      height: 100vh;
     }
   }
 
   @media(max-width:600px){
     .background-imageLI{
-      box-sizing:border-box;
-      background-size:cover;
-      height:200px;
+      background: url('https://drive.google.com/uc?export=download&id=1r98u9WhV1t7ugbSqWQuQ5QtB4GYLSV-m')no-repeat center center;
+      background-size: cover;
+      box-sizing: border-box;
+      height: 100vh;
     }
   }
 
@@ -534,15 +567,10 @@ margin-left:20px;
   }
 
     .background-imageCC{
-      background-image: url('https://drive.google.com/uc?export=download&id=1j-HfwXhc4mKRzSHLv4UUPh7BVZwJNW3v');
-      height:800px;
-      box-sizing:border-box;
-      opacity:90%;
-      position:absolute;
-      top:0;
-      bottom:0;
-      left:0;
-      right:0;
+        background: url('https://drive.google.com/uc?export=download&id=1j-HfwXhc4mKRzSHLv4UUPh7BVZwJNW3v')  no-repeat center center;
+        background-size: cover;
+        box-sizing: border-box;
+        height: 100vh;
     }
 
   
@@ -567,7 +595,6 @@ margin-left:20px;
       width:80%;
       text-align:center;
       background: #FFFFFF;
-      background: -moz-linear-gradient(-45deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
       background: -webkit-linear-gradient(-45deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
       background: linear-gradient(135deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
       border-radius:10px;
@@ -583,7 +610,6 @@ margin-left:20px;
         font-size:20px;
         border:none;
         background: #FFFFFF;
-        background: -moz-linear-gradient(-45deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
         background: -webkit-linear-gradient(-45deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
         background: linear-gradient(135deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
     }
@@ -598,7 +624,6 @@ margin-left:20px;
         font-size:10px;
         border:none;
         background: #FFFFFF;
-        background: -moz-linear-gradient(-45deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
         background: -webkit-linear-gradient(-45deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
         background: linear-gradient(135deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
       }
@@ -704,47 +729,26 @@ margin-left:20px;
     .Logged-Succ{
       padding:10px;
       font-size:85px;  
+      color:white;
     }
 
     @media(max-width:600px){
       .Logged-Succ{
         padding:20px;
         font-size:30px;
-      }
-    }
-  
-
-    .background-imageSLI{
-      background-image:url('https://drive.google.com/uc?export=download&id=1eyoF6xz2eAdZHPun9yetdY-3219vco9M');
-     
-      height:700px;
-      
-    }
-  
-    @media(max-width:300px){
-      .background-imageSLI{
-            height:150px;
-      }
-    }
-  
-    @media(max-width:600px){
-      .background-imageSLI{
-        height:200px;
-      }
-    }
-
-
-      .log-in-btn-succ{
         color:black;
-        border: 2px solid greenyellow;
+      }
+    }
+  
+      .log-in-btn-succ{
+        color:none;
+        border: 2px solid ;
         opacity: 96%;
         height:100px;
         width:300px;
         border-radius:10px;
-        background: #58CE15;
-        background: -moz-linear-gradient(left, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
-        background: -webkit-linear-gradient(left, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
-        background: linear-gradient(to right, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
+        background: linear-gradient(135deg, #F07A62 0%, #F0EDE6 65%, #F09595 100%);
+        background: linear-gradient(35deg, #F07A62 0%, #F0EDE6 65%, #F09595 100%));
         padding:25px 60px;
         text-align: center;
         font-size:28px;
@@ -755,11 +759,10 @@ margin-left:20px;
         color:black;
         border: 2px solid greenyellow;
         opacity: 96%;
-        height:20px;
-        width:60px;
+        height:10px;
+        width:30px;
         border-radius:10px;
         background: #58CE15;
-        background: -moz-linear-gradient(left, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
         background: -webkit-linear-gradient(left, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
         background: linear-gradient(to right, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
         padding:25px 60px;
@@ -770,5 +773,77 @@ margin-left:20px;
 
       .log-in-btn-succ:hover{
         text-decoration: none;
-        color:black
+        color: linear-gradient(135deg, #F07A62 0%, #F0EDE6 65%, #F09595 100%);
+      }
+      @media(max-width:600px){
+        .log-in-btn-succ{
+        color:black;
+        border: 2px solid greenyellow;
+        opacity: 96%;
+        height:10px;
+        width:15px;
+        border-radius:10px;
+        background: #58CE15;
+        background: -webkit-linear-gradient(left, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
+        background: linear-gradient(to right, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
+        padding:6px 15px;
+        text-align: center;
+        font-size:14px;
+        }
+
+      }
+
+
+      .SignUp-succ-hr{
+        background-color:#F08080; 
+        height:10px;
+        margin-bottom: 0px;
+        margin-top:0px;
+      }
+
+        @media(max-width:600px){
+          .SignUp-succ-hr{
+            background: -webkit-linear-gradient(left, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%);
+            height:10px;
+            margin-bottom: 0px;
+            margin-top:0px;
+          }
+        }
+
+        
+        @media(max-width:360px){
+          .SignUp-succ-hr{
+            background: -webkit-linear-gradient(left, #58CE15 0%, #EEF4F1 50%, #7BFF06 100%); 
+            height:10px;
+            margin-bottom: 0px;
+            margin-top:0px;
+          }
+        }
+
+
+
+      .background-imageSLI{
+        background: url('https://drive.google.com/uc?export=download&id=1C3CoNlTJKakZgtrh05Ld7zo1GO_rXwI_') no-repeat center center;
+        background-size: cover;
+        box-sizing: border-box;
+        height: 100vh;
+      }
+
+      @media(max-width:600px){
+        .background-imageSLI{
+          background: url('https://drive.google.com/uc?export=download&id=1eyoF6xz2eAdZHPun9yetdY-3219vco9M') no-repeat center center;
+          background-size: cover;
+          box-sizing: border-box;
+          height: 100vh;
+        }
+      }
+
+      
+      @media(max-width:360px){
+        .background-imageSLI{
+          background: url('https://drive.google.com/uc?export=download&id=1eyoF6xz2eAdZHPun9yetdY-3219vco9M') no-repeat center center;
+          background-size: cover;
+          box-sizing: border-box;
+          height: 100vh;
+        }
       }
