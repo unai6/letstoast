@@ -78,7 +78,9 @@ class LogInValidator extends Validator {
         }
         else{
             usersDB.forEach(user => {
-                if (user.email === string){emailInDb = true}
+                if (user.email === string){
+                    emailInDb = true
+                }
                
             })
         }

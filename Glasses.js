@@ -1,45 +1,71 @@
-let url='https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+let url='https://www.thecocktaildb.com/api/json/v1/1/list.php?g=list'
 
-
+/*
 fetch(url)
 .then(function(response) {
   return response.json();
 })
 .then(function(myJson) {
   console.log(myJson);
-});
+});*/
 
-const oneGlass = [];
+const aGlass = [];
 
-function addGlass(){
+function addGlassList(){
 
     let glassList = document.getElementById('glass-list');
-   // console.log(glassList)
-
-    oneGlass.forEach(glass =>{
+  
+    aGlass.forEach(glass =>{
 
     let newGlass= document.createElement('div')
-    newGlass.innerHTML =`
-    nuevo vaso: ${glass.drinks}
-
+    newGlass.innerHTML = `
+    Vasos: ${glass.Glass}
     `
     glassList.appendChild(newGlass)
     })
 
 }
 
-addGlass()
+addGlassList()
 
-let glassButton = document.getElementsByClassName('remove-glass-btn')
+let quitGlass = document.getElementsByClassName('remove-glass-btn')[0]
 
 function removeGlass(){
     let glassList = document.getElementById('glass-list');
 
-    let lastChild = glassList.lastElementChild
+    let lastChild = glassList.lastChild
 
     glassList.removeChild(lastChild);
-    glassList.pop()
+    aGlass.pop()
 
 }
 
-glassButton.onclick = removeGlass
+quitGlass.onclick = removeGlass
+
+
+let addNewGlass = document.getElementsByClassName('add-glass-btn')[0]
+
+function oneGlass(){
+   
+    let glassList= document.getElementById('glass-list')
+
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        let oneMoreGlass = {
+            Glass:data.drinks[0].strGlass
+           
+        }
+        
+
+        glassList.innerHTML ='';
+        aGlass.push(oneMoreGlass);
+      
+        addGlassList()
+        
+    });
+    
+}
+
+addNewGlass.onclick = oneGlass
+
