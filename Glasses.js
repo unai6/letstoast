@@ -1,13 +1,26 @@
 let url='https://www.thecocktaildb.com/api/json/v1/1/list.php?g=list'
 
-/*
 fetch(url)
 .then(function(response) {
   return response.json();
 })
 .then(function(myJson) {
   console.log(myJson);
-});*/
+});
+
+//letglassWikiUrl = `https://en.wikipedia.org/api/rest_v1/page/summary/${cocktail, cocktail}`
+
+/*function whatever(cocktail) {
+    fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${cocktail, cocktail}`)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(myJson) {
+          let mycocktail = myJson.originalimage.source
+            console.log(mycocktail)
+      })
+}
+whatever('Collins glass')*/
 
 const aGlass = [];
 
@@ -19,7 +32,22 @@ function addGlassList(){
 
     let newGlass= document.createElement('div')
     newGlass.innerHTML = `
-    Vasos: ${glass.Glass}
+    Vasos: ${glass.Glass2}
+     ${glass.Glass3}
+     ${glass.Glass4}
+     ${glass.Glass5}
+     ${glass.Glass6}
+     ${glass.Glass7}
+     ${glass.Glass8}
+     ${glass.Glass9}
+     ${glass.Glass10}
+     ${glass.Glass11}
+     ${glass.Glass12}
+     ${glass.Glass13}
+     ${glass.Glass14}
+     ${glass.Glass15}
+
+
     `
     glassList.appendChild(newGlass)
     })
@@ -53,7 +81,26 @@ function oneGlass(){
     .then(response => response.json())
     .then(data => {
         let oneMoreGlass = {
-            Glass:data.drinks[0].strGlass
+            Glass:data.drinks[0].strGlass,
+            Glass2:data.drinks[1].strGlass,
+            Glass3:data.drinks[2].strGlass,
+            Glass4:data.drinks[3].strGlass,
+            Glass5:data.drinks[4].strGlass,
+            Glass6:data.drinks[5].strGlass,
+            Glass7:data.drinks[6].strGlass,
+            Glass8:data.drinks[7].strGlass,
+            Glass9:data.drinks[8].strGlass,
+            Glass10:data.drinks[9].strGlass,
+            Glass11:data.drinks[10].strGlass,
+            Glass12:data.drinks[11].strGlass,
+            Glass13:data.drinks[12].strGlass,
+            Glass14:data.drinks[13].strGlass,
+            Glass15:data.drinks[14].strGlass,
+            Glass16:data.drinks[15].strGlass,
+            Glass17:data.drinks[16].strGlass,
+            Glass18:data.drinks[17].strGlass,
+            Glass19:data.drinks[18].strGlass,
+            Glass20:data.drinks[19].strGlass,
            
         }
         

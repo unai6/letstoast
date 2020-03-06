@@ -32,6 +32,8 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php/')
   console.log(json);
 });
 
+
+
 const randomCocktail = []
 
 function addList(){
