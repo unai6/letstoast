@@ -31,21 +31,23 @@ function addGlassList(){
     aGlass.forEach(glass =>{
 
     let newGlass= document.createElement('div')
+    newGlass.setAttribute('class', 'css-glass')
+    console.log(newGlass)
     newGlass.innerHTML = `
     Vasos: ${glass.Glass2}
-     ${glass.Glass3}
-     ${glass.Glass4}
-     ${glass.Glass5}
-     ${glass.Glass6}
-     ${glass.Glass7}
-     ${glass.Glass8}
-     ${glass.Glass9}
-     ${glass.Glass10}
-     ${glass.Glass11}
-     ${glass.Glass12}
-     ${glass.Glass13}
-     ${glass.Glass14}
-     ${glass.Glass15}
+     ${glass.Glass3}<br>
+     ${glass.Glass4}<br>
+     ${glass.Glass5}<br>
+     ${glass.Glass6}<br>
+     ${glass.Glass7}<br>
+     ${glass.Glass8}<br>
+     ${glass.Glass9}<br>
+     ${glass.Glass10}<br>
+     ${glass.Glass11}<br>
+     ${glass.Glass12}<br>
+     ${glass.Glass13}<br>
+     ${glass.Glass14}<br>
+     ${glass.Glass15}<br>
 
 
     `

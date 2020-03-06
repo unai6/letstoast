@@ -567,7 +567,7 @@ margin-left:20px;
   }
 
     .background-imageCC{
-        background: url('https://drive.google.com/uc?export=download&id=1j-HfwXhc4mKRzSHLv4UUPh7BVZwJNW3v')  no-repeat center center;
+        background: url('https://drive.google.com/uc?export=download&id=1j-HfwXhc4mKRzSHLv4UUPh7BVZwJNW3v')  repeat center center;
         background-size: cover;
         box-sizing: border-box;
         height: 100vh;
@@ -846,4 +846,13 @@ margin-left:20px;
           box-sizing: border-box;
           height: 100vh;
         }
+      }
+
+      .css-glass{
+        color:blue !important;
+      }
+
+      #glass-list p{
+
+      color:yellow;
       }
