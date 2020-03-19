@@ -8,4 +8,4 @@ function whatever(cocktail) {
             console.log(mycocktail)
       })
 }
-//whatever('Collins glass')
+whatever('Collins glass')

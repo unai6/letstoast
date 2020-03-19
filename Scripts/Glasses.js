@@ -34,10 +34,11 @@ function addGlassList(){
     newGlass.setAttribute('class', 'css-glass')
     console.log(newGlass)
     newGlass.innerHTML = `
-    Vasos: ${glass.Glass2}
-     ${glass.Glass3}<br>
-     ${glass.Glass4}<br>
-     ${glass.Glass5}<br>
+    Glass:<br>
+     ${glass.Glass2}<br> <img  class ='my-image' src='https://drive.google.com/uc?export=download&id=1gyJXb9kD_sdX70ps8ztc4ahkXVmqrRIi'><br>
+     ${glass.Glass3}<br> <img class = 'my-image' src='https://drive.google.com/uc?export=download&id=1fuOr--KKvM4W_Jew6u9limGfJywH89HX'><br>
+     ${glass.Glass16}<br> <img class = 'my-image' src ='https://drive.google.com/uc?export=download&id=1bneVR6ifxgM0nhtrDfwxv8CLLfr6xc7G'><br>
+     ${glass.Glass5}<br><img class = 'my-image' src ='https://drive.google.com/uc?export=download&id=1WKoWu_zgYl63Hwvt0OEfK_T9QmD4yhTo'><br>
      ${glass.Glass6}<br>
      ${glass.Glass7}<br>
      ${glass.Glass8}<br>
@@ -48,10 +49,10 @@ function addGlassList(){
      ${glass.Glass13}<br>
      ${glass.Glass14}<br>
      ${glass.Glass15}<br>
-
-
+    
     `
     glassList.appendChild(newGlass)
+    glassList.pop()
     })
 
 }
@@ -86,7 +87,7 @@ function oneGlass(){
             Glass:data.drinks[0].strGlass,
             Glass2:data.drinks[1].strGlass,
             Glass3:data.drinks[2].strGlass,
-            Glass4:data.drinks[3].strGlass,
+            Glass16:data.drinks[15].strGlass,
             Glass5:data.drinks[4].strGlass,
             Glass6:data.drinks[5].strGlass,
             Glass7:data.drinks[6].strGlass,
@@ -115,6 +116,7 @@ function oneGlass(){
     });
     
 }
+
 
 addNewGlass.onclick = oneGlass
 

@@ -449,9 +449,19 @@ margin-left:20px;
     background-size: cover;
     box-sizing: border-box;
     height: 100vh;
+    position:relative
+ 
     
   }
 
+
+  .signup-form{
+    position:absolute;
+    left:50%;
+    bottom:50%;
+   transform: translate(-50%, -50%)
+    
+  }
 
   .label-Name{
     padding:20px 60px;
@@ -748,7 +758,7 @@ margin-left:20px;
         width:300px;
         border-radius:10px;
         background: linear-gradient(135deg, #F07A62 0%, #F0EDE6 65%, #F09595 100%);
-        background: linear-gradient(35deg, #F07A62 0%, #F0EDE6 65%, #F09595 100%));
+        background: linear-gradient(35deg, #F07A62 0%, #F0EDE6 65%, #F09595 100%);
         padding:25px 60px;
         text-align: center;
         font-size:28px;
@@ -849,10 +859,17 @@ margin-left:20px;
       }
 
       .css-glass{
+   
         color:blue !important;
+        text-align:center;
+        font-size:16px;
+        line-height:80px;
       }
 
-      #glass-list p{
+      .glass-header{
 
-      color:yellow;
+      color: red !important;
+      font-size:16px;
+      line-height:20px;
+
       }
