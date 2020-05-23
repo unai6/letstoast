@@ -10,7 +10,7 @@ function addGlassList() {
   aGlass.map(glass => {
     //console.log(glass.Glass)
     newGlass.setAttribute('class', 'css-glass modal fade');
-    newGlass.setAttribute('id', 'exampleModal')
+    newGlass.setAttribute('id', 'exampleModal');
     newGlass.innerHTML = `
 
     <div class="modal-dialog" role="document">
