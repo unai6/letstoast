@@ -1,4 +1,4 @@
-//búsquedas a la API
+//llamadas a la API
 
 fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list')
   .then(function(response) {
@@ -34,6 +34,7 @@ fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php/')
 
 
 
+
 const randomCocktail = []
 
 function addList(){
@@ -41,17 +42,12 @@ function addList(){
   let bigList= document.getElementById('cocktail-list')
 
   randomCocktail.forEach(bebida => {
-
+    console.log(bebida)
   let newList= document.createElement('div')
   newList.innerHTML= `
   Name: ${bebida.nombre}<br>
   Glass: ${bebida.vaso}<br>
-  Ingredients: ${bebida.ingredientes1}<br>
-  Ingredients: ${bebida.ingredientes2}<br>
-  Ingredients: ${bebida.ingredientes3}<br>
-  Ingredients: ${bebida.ingredientes4}<br>
-  Ingredients: ${bebida.ingredientes5}<br>
-  Ingredients: ${bebida.ingredientes6}<br>
+  Ingredients: ${bebida.ingredientes} <br>
   Instructions: ${bebida.instrucciones}<br>
   Voilà: <img src="${bebida.foto}"><br>
   `
@@ -87,17 +83,20 @@ fetch(url)
 .then(response => response.json())
 .then(data => {
   //console.log(data.drinks[0])
+  
 let myData = {
-  nombre: data.drinks[0].strDrink,
-  ingredientes1: data.drinks[0].strIngredient1,
-  ingredientes2: data.drinks[0].strIngredient2,
-  ingredientes3: data.drinks[0].strIngredient3,
-  ingredientes4: data.drinks[0].strIngredient4,
-  ingredientes5: data.drinks[0].strIngredient5,
-  ingredientes6: data.drinks[0].strIngredient6,
-  foto: data.drinks[0].strDrinkThumb,
-  vaso: data.drinks[0].strGlass,
-  instrucciones: data.drinks[0].strInstructions
+  nombre: data.drinks.map(ingredient => ingredient.strDrink),
+  ingredientes: 
+  `${data.drinks.map(ingredient => ingredient.strIngredient1 !== null ? `${ingredient.strIngredient1},` : '')}
+   ${data.drinks.map(ingredient => ingredient.strIngredient2 !== null ? `${ingredient.strIngredient2},`: '')}
+   ${data.drinks.map(ingredient => ingredient.strIngredient3 !== null ? `${ingredient.strIngredient3},`: '')}  
+   ${data.drinks.map(ingredient => ingredient.strIngredient4 !== null ? `${ingredient.strIngredient4},`: '')}
+   ${data.drinks.map(ingredient => ingredient.strIngredient5 !== null ? `${ingredient.strIngredient5},`: '')} 
+   
+   `,
+  foto: data.drinks.map(ingredient => ingredient.strDrinkThumb),
+  vaso:  data.drinks.map(ingredient => ingredient.strGlass),
+  instrucciones:  data.drinks.map(ingredient => ingredient.strInstructions)
 }
 //console.log(myData)
 
@@ -111,19 +110,3 @@ addList()
 
 addCocktail.onclick = oneCocktail
 
-/*
-function unai(){
-fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
-.then(function(response) {
-  return response.json();
-})
-.then(json => json.drinks[0] )
-.then (json => console.log(json))
-}
-unai()*/
-
-
-let minombre = {
-  nombre: 'Javi' ,
-  edad: 32
-}
