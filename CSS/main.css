@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
 
 * {
-  font-family: Roboto Condensed;
+  font-family:'Spartan', sans-serif;
 }
 
 html {
@@ -153,7 +153,7 @@ html {
   div {
     text-align: center;
     border-radius: 10px;
-    font-size: 10px;
+    font-size: 10px !important;
   }
 
   img {
@@ -223,7 +223,17 @@ html {
     border: solid 0.8px;
     border-radius: 50%;
     width:2.4em;
-    background:
+    background:rgba(240, 181, 166, .2)
+  }
+  .navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-align: center;
+    align-items: center;
+    background:white;
+    border: 2px solid rgba(240, 181, 166, .4)
   }
 
 }
@@ -260,7 +270,9 @@ html {
 
   border: solid 0.8px;
   border-radius: 50%;
-  width:3.7em
+  width:3.7em;
+  background:rgba(240, 181, 166, .2)
+ 
 }
 
 
@@ -270,7 +282,8 @@ html {
   font-size: 1.5em;
 
 }
-  
+
+
 } 
 
 .go-home {
@@ -526,7 +539,7 @@ html {
 }
 
 .google-class-1{
-  font-size:1.7em
+  font-size:1.2em
 }
 
 .google-class-2 {
@@ -852,7 +865,7 @@ img {
 
 .glass-header {
 
-  color: red !important;
+  color: black !important;
   font-size: 16px;
   line-height: 20px;
 
