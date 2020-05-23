@@ -16,12 +16,12 @@ function addGlassList() {
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Want to become a mixologist?</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Want to become a mixologist? </h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body col-lg-12 row mx-auto">
           ${glass.Glass.join(' ')}
         </div>
         <div class="modal-footer">
@@ -47,16 +47,18 @@ function getGlasses() {
     .then(data => {
       let allGlasses = {
         Glass: data.drinks.map(glass => {
-          //console.log(glass)
           return (
-            `    
-                  <p class='card col-lg-6 mx-auto'>${glass.strGlass}</p>        
-                  `
-          );
-        })
-      };
-
-      glassList.innerHTML = '';
+            
+            
+            `   
+            <li class='col-lg-4 card '>${glass.strGlass}</li>        
+            `
+                  
+            );
+          })
+        };
+        glassList.innerHTML = '';
+      
       aGlass.push(allGlasses);
       //console.log(aGlass)
 
@@ -64,10 +66,10 @@ function getGlasses() {
 
     });
 
-  let quitGlass = document.getElementsByClassName('remove-glass-btn')[0]
+  // let quitGlass = document.getElementsByClassName('remove-glass-btn')[0]
 
   ///// Remove-glass
-  function removeGlass() {
+/*   function removeGlass() {
     let glassList = document.getElementById('glass-list');
 
     glassList.removeChild(glassList.lastChild);
@@ -78,7 +80,7 @@ function getGlasses() {
   quitGlass.onclick = removeGlass
 
 
-}
+} */
 
 
 
@@ -101,3 +103,4 @@ function getFamousCocktailsList() {
 
 getFamousCocktailsList()
 
+}
