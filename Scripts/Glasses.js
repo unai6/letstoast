@@ -59,12 +59,13 @@ function getGlasses() {
         };
         glassList.innerHTML = '';
       
-      aGlass.push(allGlasses);
-      //console.log(aGlass)
-
-      addGlassList()
-
-    });
+        aGlass.push(allGlasses);
+        //console.log(aGlass)
+        
+        addGlassList()
+        
+      });
+    };
 
   // let quitGlass = document.getElementsByClassName('remove-glass-btn')[0]
 
@@ -82,25 +83,3 @@ function getGlasses() {
 
 } */
 
-
-
-///////// fetch to get glasses
-
-
-
-function getFamousCocktailsList() {
-
-  fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail')
-    .then(function (response) {
-      return response.json();
-    })
-    .then(data => {
-      console.log(data.drinks)
-    })
-  return
-};
-
-
-getFamousCocktailsList()
-
-}

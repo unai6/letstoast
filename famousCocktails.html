@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>famous cocktails</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="./CSS/main.css" />
-    <link rel="stylesheet" href="./CSS/Glass.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -13,26 +14,18 @@
     />
     <script src="https://kit.fontawesome.com/a418f03537.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@600&display=swap" rel="stylesheet">
-    <title>Document</title>
-  </head>
-  <body>
-    <a href="./index.html"><i class="far fa-arrow-alt-circle-left" style='font-size:3em; margin:1em; color:rgba(240, 181, 166, .9)'></i></a>
-    <div>
-      <div class="glass-header">
-        <p>
-          Mixology is not a one glass thing...
-        </p>
-      </div>
 
-      <button class="add-glass-btn btn" style='border-radius:10px; border:1px solid' type="button"  data-toggle="modal" data-target="#exampleModal">Show Glasses</button>
+</head>
+<body>
+    
 
 
-      <div id="glass-list">
+<div id='famousCocktails'></div>
+<a href="javascript:prevPage()" id="btn_prev">Prev</a>
+<a href="javascript:nextPage()" id="btn_next">Next</a>
+page: <span id="page"></span>
 
-      <div id="images-list"></div>
-    </div>
-
-    <script src="./Scripts/Glasses.js"></script>
+    <script src='./Scripts/FamousCocktails.js'></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -48,5 +41,5 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-  </body>
+</body>
 </html>
