@@ -246,6 +246,12 @@ html {
 
 @media (min-width:900px){
 
+
+  .Login-form{
+      margin-top:10em;
+      height: 25em;
+  }
+
   .getcocktail-form {
     display: flex;
     justify-content: flex-end;
@@ -324,6 +330,7 @@ html {
   padding: 5px 15px;
   border: solid;
   opacity: 70%;
+  margin-top:2em
 }
 
 
@@ -572,6 +579,8 @@ html {
   font-weight: bold;
   text-align: center;
   padding: 20px;
+  background: white;
+  opacity:70%;
 }
 
 .background-imageSU {
@@ -600,6 +609,7 @@ html {
   border: none;
   color: white;
   margin: 2px 0px;
+  height:8em;
 
 }
 
