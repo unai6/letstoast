@@ -323,7 +323,7 @@ html {
 }
 .glass-link {
   position: absolute;
-  left: 12.7%;
+  left: 14%;
   color: black
 }
 .glass-tools {
@@ -700,7 +700,7 @@ html {
 }
 
 .background-imageCC {
-  background: url('https://drive.google.com/uc?export=download&id=1j-HfwXhc4mKRzSHLv4UUPh7BVZwJNW3v') repeat center center;
+  background: url('https://images.pexels.com/photos/452742/pexels-photo-452742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') repeat center center;
   background-size: cover;
   box-sizing: border-box;
   height: 100vh;
