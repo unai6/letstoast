@@ -287,6 +287,50 @@ html {
   margin-top: 10px;
   box-shadow: 17px -10px 5px 1px rgba(0,0,0,0.75);
 }
+.glass-header {
+
+  color: black !important;
+  font-size: 2em !important;
+  line-height: 20px;
+
+}
+.p-header{
+  line-height: 3em;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  background: rgba(252,70,107,.1);
+  transform: scale(.5);
+  animation: .5s slideIn ease-in-out forwards, 1s skewBg ease-in-out;
+}
+
+@keyframes skewBg {
+0% {
+  transform: scale(.5);
+}
+100% {
+  transform: scale(1);
+}
+}
+
+@keyframes underline {
+100% {
+  width: 100%;
+}
+}
+
+@keyframes slideIn {
+100% {
+  transform: translateY(0px);
+  opacity: 1;
+}
+}
 }
 
 
@@ -403,6 +447,44 @@ html {
   margin-bottom: 10px !important;
   margin-top: 10px !important;
   box-shadow: 17px 10px 5px 1px rgba(0,0,0,0.6);
+}
+.p-header{
+  line-height: 5em;
+  font-size: 1.6em;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--secondary-color);
+  transform: scale(.5);
+  animation: .5s slideIn ease-in-out forwards, 1s skewBg ease-in-out;
+}
+
+@keyframes skewBg {
+0% {
+  transform: scale(.5);
+}
+100% {
+  transform: scale(1);
+}
+}
+
+@keyframes underline {
+100% {
+  width: 100%;
+}
+}
+
+@keyframes slideIn {
+100% {
+  transform: translateY(0px);
+  opacity: 1;
+}
 }
 } 
 
@@ -894,10 +976,3 @@ div {
   line-height: 80px;
 }
 
-.glass-header {
-
-  color: black !important;
-  font-size: 16px;
-  line-height: 20px;
-
-}
