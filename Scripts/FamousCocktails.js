@@ -8,7 +8,7 @@ const getCocktailsList = () => {
 
     let cocktailList = document.getElementById('famousCocktails');
     let newCocktailList = document.createElement('div');
-    console.log(cocktail)
+    //  console.log(cocktail)
     cocktail.map(eachCocktail => {
         newCocktailList.setAttribute('class', 'css-glass ');
         newCocktailList.innerHTML = ` 
