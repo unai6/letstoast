@@ -39,25 +39,28 @@ const randomCocktail = []
 
 function addList(){
     
-  let bigList= document.getElementById('cocktail-list')
+  let bigList= document.getElementById('cocktail-list');
 
   randomCocktail.forEach(bebida => {
     console.log(bebida)
-  let newList= document.createElement('div')
+  let newList= document.createElement('li');
+  newList.setAttribute('class', 'text-cocktail')
   newList.innerHTML= `
+  <p>
   Name: ${bebida.nombre}<br>
   Glass: ${bebida.vaso}<br>
   Ingredients: ${bebida.ingredientes} <br>
   Instructions: ${bebida.instrucciones}<br>
-  Voilà: <img src="${bebida.foto}"><br>
+   <img src="${bebida.foto}"><br>
+   <button type='button' class='remove-button' onClick='toDelete()'>Delete</button> 
+   </p>
   `
   bigList.appendChild(newList)
   
 })
-
 }
 
-addList()
+addList();
 
 let myButton = document.getElementById("remove-button")
 

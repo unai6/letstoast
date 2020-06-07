@@ -35,6 +35,13 @@ html {
     font-size: 1rem;
   }
 
+  .home-hr {
+    margin-top: 2em;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+  
   .home-button {
     transition-duration: 0.4s;
     border-radius: 1%;
@@ -43,6 +50,10 @@ html {
     font-family: Roboto;
     font-size: 2em;
 
+  }
+  .navbar{
+    display:block !important;
+    
   }
 
   .Create-cocktail {
@@ -160,11 +171,15 @@ html {
     font-size: 10px !important;
   }
 
+ 
   img {
-    width: 200px;
+    width: 13em;
     border-radius: 50%;
-    margin-left: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
+  
 
   .Logged-Succ {
     padding: 20px;
@@ -230,11 +245,7 @@ html {
     background:rgba(240, 181, 166, .2)
   }
   .navbar-collapse {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -ms-flex-align: center;
+    width:11em;
     align-items: center;
     background:white;
     border: 2px solid rgba(240, 181, 166, .4)
@@ -250,14 +261,46 @@ html {
     left: 25%;
 
 }
-  
+#cocktail-list {
+  display: inline-block;
+  color: black;
+  width: 80%;
+  text-align: center;
+  background: rgb(240,128,128);
+  background: linear-gradient(128deg, rgba(240,128,128,1) 7%, rgba(240,128,128,0.8) 35%, rgba(240,128,128,0.4) 79%, rgba(240,128,128,0) 100%);
+  border-radius: 10px;
+}
 
+.remove-button {
+  text-decoration: none;
+  margin-left: 40px;
+  padding: 10px;
+  width: 85px;
+  background: rgb(34,175,195);
+  background: linear-gradient(0deg, rgba(34,175,195,1) 0%, rgba(8,53,244,0.8578781854538691) 100%);
+  color:white;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius:5px;
+  font-size:1.4em
+
+}
+.text-cocktail{
+  font-size:1.4em;
+  list-style-type: none;
+}
 }
 
 
 @media (min-width:900px){
 
-
+  .home-hr {
+    margin-top: 1em;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+  
   .Login-form{
       margin-top:10em;
       height: 25em;
@@ -331,7 +374,30 @@ html {
   transform: translate(30%);
 }
 
+#cocktail-list {
+  display: inline-block;
+  color: black;
+  width: 30%;
+  text-align: center;
+  background: rgb(240,128,128);
+  background: linear-gradient(128deg, rgba(240,128,128,1) 7%, rgba(240,128,128,0.8) 35%, rgba(240,128,128,0.4) 79%, rgba(240,128,128,0) 100%);
+  border-radius: 10px;
+}
 
+
+.remove-button {
+  text-decoration: none;
+  margin-left: 70px;
+  padding: 10px;
+  width: 85px;
+  background: rgb(34,175,195);
+  background: linear-gradient(0deg, rgba(34,175,195,1) 0%, rgba(8,53,244,0.8578781854538691) 100%);
+  color:white;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius:5px
+
+}
 
 } 
 
@@ -723,17 +789,6 @@ html {
   }
 }
 
-#cocktail-list {
-  display: inline-block;
-  color: black;
-  width: 80%;
-  text-align: center;
-  background: #FFFFFF;
-  background: -webkit-linear-gradient(-45deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
-  background: linear-gradient(135deg, #FFFFFF 0%, #FFFEAF 65%, #F7FD34 100%);
-  border-radius: 10px;
-}
-
 #cocktail-button {
 
   border-radius: 10px;
@@ -760,76 +815,6 @@ div {
 
 
 
-img {
-  width: 350px;
-  border-radius: 50%;
-  margin-left: 30px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-
-@media(max-width:300px) {
-  img {
-    width: 100px;
-    border-radius: 50%;
-    margin-left: 5px;
-  }
-}
-
-.remove-button {
-  text-decoration: none;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin-left: 70px;
-  border-radius: 50%;
-  position: fixed;
-  padding: 10px;
-  width: 85px;
-  background-color: black;
-  color: wheat;
-  margin-right: 10px;
-  margin-bottom: 10px;
-
-}
-
-@media(max-width:768px) {
-  .remove-button {
-    text-decoration: none;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin-left: 15px;
-    border-radius: 50%;
-    position: fixed;
-    padding: 10px;
-    width: 85px;
-    background-color: black;
-    color: wheat
-  }
-}
-
-
-
-@media(max-width:500px) {
-  .remove-button {
-    text-decoration: none;
-    position: absolute;
-    margin-left: 15px;
-    border-radius: 50%;
-    position: fixed;
-    padding: 10px;
-    width: 65px;
-    background-color: black;
-    color: wheat
-  }
-}
-
-.remove-button:hover {
-  color: #ffff66;
-
-}
 
 .Logged-Succ {
   padding: 10px;
