@@ -171,16 +171,6 @@ html {
     font-size: 10px !important;
   }
 
- 
-  img {
-    width: 13em;
-    border-radius: 50%;
-    margin-left: 30px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
-  
-
   .Logged-Succ {
     padding: 20px;
     font-size: 30px;
@@ -288,6 +278,14 @@ html {
 .text-cocktail{
   font-size:1.4em;
   list-style-type: none;
+}
+.img-FC{
+  width:13em !important;
+  border-radius: 50%; 
+  margin-left: 30px; 
+  margin-bottom: 10px;
+  margin-top: 10px;
+  box-shadow: 17px -10px 5px 1px rgba(0,0,0,0.75);
 }
 }
 
@@ -398,7 +396,14 @@ html {
   border-radius:5px
 
 }
-
+.img-FC{
+  width:20em !important;
+  border-radius: 50% !important; 
+  margin-left: 30px !important; 
+  margin-bottom: 10px !important;
+  margin-top: 10px !important;
+  box-shadow: 17px 10px 5px 1px rgba(0,0,0,0.6);
+}
 } 
 
 .go-home {

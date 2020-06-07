@@ -10,11 +10,11 @@ const getCocktailsList = () => {
     let newCocktailList = document.createElement('div');
     //  console.log(cocktail)
     cocktail.map(eachCocktail => {
-        newCocktailList.setAttribute('class', 'css-glass ');
+        newCocktailList.setAttribute('class', 'css-glass col-lg');
         newCocktailList.innerHTML = ` 
-        <ul class='col-lg-12 row mx-auto '>
+        
         ${eachCocktail.join(' ')}
-        </ul>    
+          
         `
     })
 
@@ -35,8 +35,10 @@ function getFamousCocktailsList() {
             let allCocktails = data.drinks.map(drinks => {
                 return (
                     `
-                <li style ='list-style-type:none'> ${drinks.strDrink}</li>
-                <img src='${drinks.strDrinkThumb}'/> `
+                <li style ='list-style-type:none; font-size:1.4em'> ${drinks.strDrink}</li>
+                <img class='img-FC' src='${drinks.strDrinkThumb}'/> 
+                <hr style='border:1px solid #f08080'>`
+                
                 );
                 
             });
