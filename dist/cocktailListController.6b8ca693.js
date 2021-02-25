@@ -12408,7 +12408,7 @@ var ResultsView = /*#__PURE__*/function (_View) {
     key: "_generateMarkup",
     value: function _generateMarkup() {
       return this._data.map(function (drink) {
-        return "\n            \n            <li style ='list-style-type:none; font-size:1.4em'> ".concat(drink.name, "</li>\n            <img class='img-FC' src='").concat(drink.image, "'/> \n            <hr style='border:1px solid #f08080'>\n       ");
+        return "\n            \n            <li class='random--cocktail' style ='list-style-type:none; font-size:1.4em'> ".concat(drink.name, "</li>\n            <img class='glass-class d-block mx-auto rounded rounded-circle' src='").concat(drink.image, "'/> \n       ");
       });
     }
   }]);
@@ -14243,7 +14243,7 @@ var state = {
   search: {
     results: [],
     page: 1,
-    resultsPerPage: 10
+    resultsPerPage: 6
   }
 };
 exports.state = state;
@@ -14329,7 +14329,7 @@ var cocktailsController = /*#__PURE__*/function () {
           case 2:
             results = model.state.search.results;
 
-            _cocktailListresultsView.default.render(results.slice(0, 10));
+            _cocktailListresultsView.default.render(results.slice(0, 6));
 
           case 4:
           case "end":
@@ -14395,7 +14395,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56264" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56386" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

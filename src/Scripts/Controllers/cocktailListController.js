@@ -12,7 +12,7 @@ const cocktailsController = async function () {
 
   const { results } = model.state.search
 
-  resultsView.render(results.slice(0, 10))
+  resultsView.render(results.slice(0, 6))
 }
 
 

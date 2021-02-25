@@ -14107,9 +14107,9 @@ var RandomCocktailView = /*#__PURE__*/function (_View) {
   _createClass(RandomCocktailView, [{
     key: "_generateMarkup",
     value: function _generateMarkup() {
-      return "\n              <p>\n              Name: ".concat(this._data.name, "<br>\n              Glass: ").concat(this._data.glass, "<br>\n              Ingredients: ").concat(this._data.ingredients.map(function (ing) {
+      return "\n              <div>\n                <p class='random--cocktail'>Name: ".concat(this._data.name, "</p><br>\n                <p class='random--cocktail'>Glass: ").concat(this._data.glass, "</p><br>\n                <p class='random--cocktail'>Ingredients: ").concat(this._data.ingredients.map(function (ing) {
         return "<span>".concat(ing.drink, "</span>");
-      }), " <br>\n              Instructions: ").concat(this._data.instructions, "<br>\n              <img src=\"").concat(this._data.image, "\"><br>\n              </p>\n          ");
+      }), "</p><br>\n                <p class='random--cocktail'>Instructions: ").concat(this._data.instructions, "</p><br>\n                <img class='glass-class rounded rounded-pill d-block mx-auto' src=\"").concat(this._data.image, "\"><br>\n              </div>\n          ");
     }
   }]);
 
@@ -14311,7 +14311,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56264" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56386" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

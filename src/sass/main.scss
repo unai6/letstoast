@@ -38,6 +38,61 @@ html {
   }
 }
 
+.carousel{
+  background-color: $color-primary;
+}
+.image-1{
+  height: 50%;
+  width: 50%;
+  margin: auto;
+}
+
+.button-button5{
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  font-size: 5em;
+  color: $color-grey-dark-1;
+}
+
+.getcocktail-form{
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: .5em;
+  color: $color-grey-dark-1;
+}
+
+.google-class-3{
+  width: 3.5%;
+  border-radius: 50%;
+  color: $color-primary;
+  background-color: transparent;
+  border: none;
+}
+
+.google-class-2{
+  height: 1em;
+}
+
+.nav-item > a,
+.h4-title
+{
+  font-size: 2em;
+  color: $color-grey-dark-1;
+  text-align: center;
+  &:hover{
+    color: $color-grey-dark-2;
+}
+}
+
+.Create-cocktail{
+  color: white;
+  font-size: 1.33em;
+  
+  &:hover{
+    color: white;
+}
+}
 .pagination {
   margin-top: auto;
   padding: 0 3.5rem;
@@ -59,8 +114,11 @@ html {
 }
 
 .btn--inline {
+  display: block;
+  margin: auto;
+  margin-bottom: 1em;
   color: $color-primary;
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: 600;
   border: none;
   background-color: $color-grey-light-1;
@@ -104,4 +162,10 @@ html {
 
 .logout{
   display: none;
+}
+
+.footer-links > li > a,
+.text-justify{
+  font-size: 1.5em;
+  color: $color-grey-dark-1;
 }

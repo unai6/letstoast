@@ -6,15 +6,35 @@
 }
 
 .glass-link {
-  margin-left: 2em;
+  margin-left: 1.5em;
+  font-size: 2em;
+  color: #615551;
+}
+.glass-link:hover {
+  color: #918581;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 .glass-tools-fc {
   margin-left: 1em;
+  font-size: 2em;
+  color: #615551;
+}
+.glass-tools-fc:hover {
+  color: #918581;
 }
 
 .glass-class {
   height: 15em;
+}
+
+.random--cocktail {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 2em;
 }
 
 * {
@@ -38,6 +58,62 @@ html {
   }
 }
 
+.carousel {
+  background-color: #f38e82;
+}
+
+.image-1 {
+  height: 50%;
+  width: 50%;
+  margin: auto;
+}
+
+.button-button5 {
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  font-size: 5em;
+  color: #615551;
+}
+
+.getcocktail-form {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 0.5em;
+  color: #615551;
+}
+
+.google-class-3 {
+  width: 3.5%;
+  border-radius: 50%;
+  color: #f38e82;
+  background-color: transparent;
+  border: none;
+}
+
+.google-class-2 {
+  height: 1em;
+}
+
+.nav-item > a,
+.h4-title {
+  font-size: 2em;
+  color: #615551;
+  text-align: center;
+}
+.nav-item > a:hover,
+.h4-title:hover {
+  color: #918581;
+}
+
+.Create-cocktail {
+  color: white;
+  font-size: 1.33em;
+}
+.Create-cocktail:hover {
+  color: white;
+}
+
 .pagination {
   margin-top: auto;
   padding: 0 3.5rem;
@@ -55,8 +131,11 @@ html {
 }
 
 .btn--inline {
+  display: block;
+  margin: auto;
+  margin-bottom: 1em;
   color: #f38e82;
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: 600;
   border: none;
   background-color: #f9f5f3;
@@ -94,6 +173,12 @@ html {
 
 .logout {
   display: none;
+}
+
+.footer-links > li > a,
+.text-justify {
+  font-size: 1.5em;
+  color: #615551;
 }
 
 /*# sourceMappingURL=/main.2026268b.css.map */

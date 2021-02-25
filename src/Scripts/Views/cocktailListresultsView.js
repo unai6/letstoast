@@ -8,9 +8,8 @@ class ResultsView extends View {
         return this._data.map((drink) => {
             return `
             
-            <li style ='list-style-type:none; font-size:1.4em'> ${drink.name}</li>
-            <img class='img-FC' src='${drink.image}'/> 
-            <hr style='border:1px solid #f08080'>
+            <li class='random--cocktail' style ='list-style-type:none; font-size:1.4em'> ${drink.name}</li>
+            <img class='glass-class d-block mx-auto rounded rounded-circle' src='${drink.image}'/> 
        `
         })
         
