@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>famous cocktails</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./CSS/main.css" />
+    <link rel="stylesheet" href="./src/sass/main.scss" />
+
     
     <link
       rel="stylesheet"
@@ -19,16 +20,33 @@
       href="https://fonts.googleapis.com/css2?family=Spartan:wght@600&display=swap"
       rel="stylesheet"
     />
-
+    <script defer src="./src/Scripts/Controllers/cocktailListController.js"></script>
 
   </head>
   <body>
     <a href="./index.html"><i class="far fa-arrow-alt-circle-left" style='font-size:3em; margin:1em; color:rgba(240, 181, 166, .9)'></i></a>
     <div class='container-fluid'>
-      <div  id="famousCocktails" class='row'></div>
+      <div  id="famousCocktails" class='row'>
+        <ul class='cocktail--list'></ul>
+      </div>
     </div>
 
-    <script src="./Scripts/FamousCocktails.js"></script>
+    <div class="pagination">
+      <!-- <button class="btn--inline pagination__btn--prev">
+        <svg class="search__icon">
+          <use href="src/img/icons.svg#icon-arrow-left"></use>
+        </svg>
+        <span>Page 1</span>
+      </button>
+      <button class="btn--inline pagination__btn--next">
+        <span>Page 3</span>
+        <svg class="search__icon">
+          <use href="src/img/icons.svg#icon-arrow-right"></use>
+        </svg>
+      </button> -->
+    </div>
+
+  
    
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

@@ -1,0 +1,29 @@
+{
+  "name": "letstoast",
+  "version": "1.0.0",
+  "description": "Project goals\r - Create a website that allows the client to check some cocktails recipes sorting by cocktail type.\r - Create a Landing page, sign up page and log in page in order to allow interested people become a part of the community.\r - Create a responsive website",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel start index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unai6/letstoast.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unai6/letstoast/issues"
+  },
+  "homepage": "https://github.com/unai6/letstoast#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "core-js": "^3.9.0"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "regenerator-runtime": "^0.13.7",
+    "sass": "^1.32.8"
+  }
+}
