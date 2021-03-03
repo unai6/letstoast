@@ -14329,9 +14329,11 @@ var cocktailsController = /*#__PURE__*/function () {
           case 2:
             results = model.state.search.results;
 
-            _cocktailListresultsView.default.render(results.slice(0, 6));
+            _cocktailListresultsView.default.render(results);
 
-          case 4:
+            _cocktailListaginationView.default.render(model.state.search);
+
+          case 5:
           case "end":
             return _context.stop();
         }
@@ -14357,8 +14359,6 @@ var controlPagination = function controlPagination(goToPage) {
 
   _cocktailListaginationView.default.render(model.state.search);
 };
-
-controlPagination();
 
 var init = function init() {
   cocktailsController();
@@ -14395,7 +14395,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56386" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60130" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

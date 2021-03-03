@@ -12,7 +12,8 @@ const cocktailsController = async function () {
 
   const { results } = model.state.search
 
-  resultsView.render(results.slice(0, 6))
+  resultsView.render(results)
+  paginationView.render(model.state.search)
 }
 
 
@@ -32,7 +33,7 @@ const controlPagination = function (goToPage) {
   paginationView.render(model.state.search);
 
 }
-controlPagination()
+
 
 const init = () => {
   cocktailsController();
