@@ -10,10 +10,10 @@ import * as model from '../Models/CocktailListmodel';
 const cocktailsController = async function () {
   await model.fetchCocktailsController()
 
-  const { results } = model.state.search
+  const { results } = model.state.search;
 
-  resultsView.render(results)
-  paginationView.render(model.state.search)
+  resultsView.render(results.slice(0,6));
+  paginationView.render(model.state.search);
 }
 
 
@@ -23,7 +23,7 @@ const getSearchResultsPage = function (page = model.state.search.page) {
   const start = (page - 1) * model.state.search.resultsPerPage;
   const end = page * model.state.search.resultsPerPage;
 
-  return model.state.search.results.slice(start, end)
+  return model.state.search.results.slice(start, end);
 }
 
 

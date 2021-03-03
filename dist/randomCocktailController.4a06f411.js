@@ -12201,7 +12201,125 @@ try {
   Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}],"node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
+},{}],"src/Scripts/Views/View.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var View = /*#__PURE__*/function () {
+  function View() {
+    _classCallCheck(this, View);
+
+    _defineProperty(this, "_data", void 0);
+  }
+
+  _createClass(View, [{
+    key: "render",
+    value: function render(data) {
+      if (!data) return;
+      this._data = data;
+
+      var markup = this._generateMarkup();
+
+      this._clear();
+
+      this._parentEl.insertAdjacentHTML('afterbegin', markup);
+    }
+  }, {
+    key: "_clear",
+    value: function _clear() {
+      this._parentEl.innerHTML = '';
+    }
+  }]);
+
+  return View;
+}();
+
+exports.default = View;
+},{}],"src/Scripts/Views/randomCocktailView.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _View2 = _interopRequireDefault(require("./View"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var RandomCocktailView = /*#__PURE__*/function (_View) {
+  _inherits(RandomCocktailView, _View);
+
+  var _super = _createSuper(RandomCocktailView);
+
+  function RandomCocktailView() {
+    var _this;
+
+    _classCallCheck(this, RandomCocktailView);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _defineProperty(_assertThisInitialized(_this), "_parentEl", document.querySelector('.random--cocktail'));
+
+    return _this;
+  }
+
+  _createClass(RandomCocktailView, [{
+    key: "_generateMarkup",
+    value: function _generateMarkup() {
+      return "\n              <div>\n                <p class='random--cocktail'>Name: ".concat(this._data.name, "</p><br>\n                <p class='random--cocktail'>Glass: ").concat(this._data.glass, "</p><br>\n                <p class='random--cocktail'>Ingredients: ").concat(this._data.ingredients.map(function (ing) {
+        return "<span>".concat(ing.drink, "</span>");
+      }), "</p><br>\n                <p class='random--cocktail'>Instructions: ").concat(this._data.instructions, "</p><br>\n                <img class='glass-class rounded rounded-pill d-block mx-auto' src=\"").concat(this._data.image, "\"><br>\n              </div>\n          ");
+    }
+  }]);
+
+  return RandomCocktailView;
+}(_View2.default);
+
+var _default = new RandomCocktailView();
+
+exports.default = _default;
+},{"./View":"src/Scripts/Views/View.js"}],"node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -14001,125 +14119,7 @@ module.exports.default = axios;
 
 },{"./utils":"node_modules/axios/lib/utils.js","./helpers/bind":"node_modules/axios/lib/helpers/bind.js","./core/Axios":"node_modules/axios/lib/core/Axios.js","./core/mergeConfig":"node_modules/axios/lib/core/mergeConfig.js","./defaults":"node_modules/axios/lib/defaults.js","./cancel/Cancel":"node_modules/axios/lib/cancel/Cancel.js","./cancel/CancelToken":"node_modules/axios/lib/cancel/CancelToken.js","./cancel/isCancel":"node_modules/axios/lib/cancel/isCancel.js","./helpers/spread":"node_modules/axios/lib/helpers/spread.js","./helpers/isAxiosError":"node_modules/axios/lib/helpers/isAxiosError.js"}],"node_modules/axios/index.js":[function(require,module,exports) {
 module.exports = require('./lib/axios');
-},{"./lib/axios":"node_modules/axios/lib/axios.js"}],"src/Scripts/Views/View.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var View = /*#__PURE__*/function () {
-  function View() {
-    _classCallCheck(this, View);
-
-    _defineProperty(this, "_data", void 0);
-  }
-
-  _createClass(View, [{
-    key: "render",
-    value: function render(data) {
-      if (!data) return;
-      this._data = data;
-
-      var markup = this._generateMarkup();
-
-      this._clear();
-
-      this._parentEl.insertAdjacentHTML('afterbegin', markup);
-    }
-  }, {
-    key: "_clear",
-    value: function _clear() {
-      this._parentEl.innerHTML = '';
-    }
-  }]);
-
-  return View;
-}();
-
-exports.default = View;
-},{}],"src/Scripts/Views/randomCocktailView.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _View2 = _interopRequireDefault(require("./View"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var RandomCocktailView = /*#__PURE__*/function (_View) {
-  _inherits(RandomCocktailView, _View);
-
-  var _super = _createSuper(RandomCocktailView);
-
-  function RandomCocktailView() {
-    var _this;
-
-    _classCallCheck(this, RandomCocktailView);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _super.call.apply(_super, [this].concat(args));
-
-    _defineProperty(_assertThisInitialized(_this), "_parentEl", document.querySelector('.random--cocktail'));
-
-    return _this;
-  }
-
-  _createClass(RandomCocktailView, [{
-    key: "_generateMarkup",
-    value: function _generateMarkup() {
-      return "\n              <div>\n                <p class='random--cocktail'>Name: ".concat(this._data.name, "</p><br>\n                <p class='random--cocktail'>Glass: ").concat(this._data.glass, "</p><br>\n                <p class='random--cocktail'>Ingredients: ").concat(this._data.ingredients.map(function (ing) {
-        return "<span>".concat(ing.drink, "</span>");
-      }), "</p><br>\n                <p class='random--cocktail'>Instructions: ").concat(this._data.instructions, "</p><br>\n                <img class='glass-class rounded rounded-pill d-block mx-auto' src=\"").concat(this._data.image, "\"><br>\n              </div>\n          ");
-    }
-  }]);
-
-  return RandomCocktailView;
-}(_View2.default);
-
-var _default = new RandomCocktailView();
-
-exports.default = _default;
-},{"./View":"src/Scripts/Views/View.js"}],"src/Scripts/Models/RandomCocktailModel.js":[function(require,module,exports) {
+},{"./lib/axios":"node_modules/axios/lib/axios.js"}],"src/Scripts/Models/RandomCocktailModel.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14213,8 +14213,6 @@ require("regenerator-runtime/runtime");
 
 var _regeneratorRuntime = require("regenerator-runtime");
 
-var _axios = _interopRequireDefault(require("axios"));
-
 var _randomCocktailView = _interopRequireDefault(require("../Views/randomCocktailView"));
 
 var model = _interopRequireWildcard(require("../Models/RandomCocktailModel"));
@@ -14232,7 +14230,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var nav = document.querySelectorAll('.on--login');
 var logoutBtn = document.querySelector('.logout');
 var addCocktail = document.getElementById('cocktail-button');
-var bigList = document.getElementById('cocktail-list');
 
 if (logoutBtn && sessionStorage.length > 0) {
   logoutBtn.style.display = 'block';
@@ -14283,7 +14280,7 @@ var logOut = function logOut() {
 };
 
 logoutBtn !== null && logoutBtn.addEventListener('click', logOut);
-},{"core-js/stable":"node_modules/core-js/stable/index.js","regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","regenerator-runtime":"node_modules/regenerator-runtime/runtime.js","axios":"node_modules/axios/index.js","../Views/randomCocktailView":"src/Scripts/Views/randomCocktailView.js","../Models/RandomCocktailModel":"src/Scripts/Models/RandomCocktailModel.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"core-js/stable":"node_modules/core-js/stable/index.js","regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","regenerator-runtime":"node_modules/regenerator-runtime/runtime.js","../Views/randomCocktailView":"src/Scripts/Views/randomCocktailView.js","../Models/RandomCocktailModel":"src/Scripts/Models/RandomCocktailModel.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -14311,7 +14308,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60130" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60166" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

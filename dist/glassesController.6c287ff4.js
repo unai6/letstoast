@@ -14173,8 +14173,8 @@ var GlassesResultsView = /*#__PURE__*/function (_View) {
     key: "_generateMarkup",
     value: function _generateMarkup() {
       return this._data.map(function (glass) {
-        return glass.glassName ? "<li>".concat(glass.glassName, "</li>") : null;
-      });
+        return glass.glassName ? "<li class='unique-glass'>".concat(glass.glassName, "</li>") : null;
+      }).join('');
     }
   }]);
 
@@ -14266,7 +14266,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60130" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60166" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

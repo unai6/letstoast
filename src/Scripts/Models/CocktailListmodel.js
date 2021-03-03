@@ -2,7 +2,7 @@ import { async } from 'regenerator-runtime';
 import axios from 'axios'
 
 
-const url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail'
+const url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail';
 
 export const state = {
     search: {
@@ -30,6 +30,4 @@ export async function fetchCocktailsController() {
 
         console.log(err)
     }
-
-
 };

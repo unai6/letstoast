@@ -1,7 +1,6 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import { async } from 'regenerator-runtime';
-import axios from 'axios';
 import randomCocktailView from '../Views/randomCocktailView';
 import * as model from '../Models/RandomCocktailModel';
 
@@ -9,7 +8,6 @@ import * as model from '../Models/RandomCocktailModel';
 const nav = document.querySelectorAll('.on--login')
 const logoutBtn = document.querySelector('.logout')
 const addCocktail = document.getElementById('cocktail-button')
-const bigList = document.getElementById('cocktail-list');
 
 
 if (logoutBtn && sessionStorage.length > 0) {

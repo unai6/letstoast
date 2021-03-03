@@ -14329,7 +14329,7 @@ var cocktailsController = /*#__PURE__*/function () {
           case 2:
             results = model.state.search.results;
 
-            _cocktailListresultsView.default.render(results);
+            _cocktailListresultsView.default.render(results.slice(0, 6));
 
             _cocktailListaginationView.default.render(model.state.search);
 
@@ -14395,7 +14395,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60130" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60166" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

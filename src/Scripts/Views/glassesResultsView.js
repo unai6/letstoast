@@ -5,8 +5,8 @@ class GlassesResultsView extends View {
    
    _generateMarkup(){
       return this._data.map((glass) => {
-       return glass.glassName ? `<li>${glass.glassName}</li>` : null
-      })
+       return glass.glassName ? `<li class='unique-glass'>${glass.glassName}</li>` : null
+      }).join('')
    }
 }
 

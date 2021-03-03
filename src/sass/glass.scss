@@ -17,40 +17,61 @@ $bp-smallest: 31.25em; // 500px
 
 
 .glass-div,
-.glass-char{
+.glass-char {
     display: flex;
     justify-content: space-around;
 
 }
 
-.glass-link{
+.glass-link {
     margin-left: 1.5em;
     font-size: 2em;
     color: $color-grey-dark-1;
-    &:hover{
+
+    &:hover {
         color: $color-grey-dark-2;
     }
 }
+
 a {
     text-decoration: none !important;
 }
-.glass-tools-fc{
+
+.glass-tools-fc {
     margin-left: 1em;
     font-size: 2em;
     color: $color-grey-dark-1;
 
-    &:hover{
+    &:hover {
         color: $color-grey-dark-2;
     }
 }
 
-.glass-class{
+.glass-class {
     height: 15em;
 
 }
 
-.random--cocktail{
+.random--cocktail {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin-top: 2em;
+}
+
+.glass-header {
+    font-size: 3em;
+    text-align: center;
+}
+
+#glass-list {
+    column-count: 2;
+    margin-top: 2em;
+}
+
+.unique-glass {
+    font-size: 2em;
+    text-align: center;
+    list-style: none;
+    margin-left: 2em;
+    margin-right: 5em;
 }
